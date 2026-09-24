@@ -367,7 +367,7 @@ def main():
         writer.writerows(all_manifest_rows)
 
 
-    # Resumo e confirmação das etapas pra ver se deu certo
+    # Resumo e confirmação das etapas pra ver se deu certo 
 
     print()
     print("=" * 70)
