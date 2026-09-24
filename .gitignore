@@ -1,0 +1,20 @@
+
+# Build / binarios gerados
+algorithms/cycle_packing/build/
+algorithms/cycle_packing/dec
+algorithms/cycle_packing/dist
+
+# Crash dumps
+core
+core.*
+*.core
+
+# Python
+__pycache__/
+*.pyc
+
+# Temporarios
+*.tmp
+*.log
+SREV.zip
+*.zip
