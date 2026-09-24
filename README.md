@@ -1,8 +1,8 @@
-## PFG-Rearranjo-de-Genomas
+# PFG-Rearranjo-de-Genomas
 Os problemas de Rearranjo de Genomas permitem a comparação de genomas de diferentes indivíduos e têm múltiplas aplicações na área da Biologia Computacional
 
 
-# 1 Objetivos
+## 1 Objetivos
 Os problemas de Rearranjo de Genomas permitem a comparação de genomas de
 diferentes indivíduos e têm múltiplas aplicações na área da Biologia Computacional. Como
 esses problemas já vêm sendo estudados há muitos anos, várias versões foram propostas
@@ -18,11 +18,11 @@ comparação de diferentes abordagens conhecidas e diferentes configurações do
 comparações poderão ser realizadas em bases de dados geradas artificialmente e com dados
 de genomas reais.
 
-# 2 Procedimento
+## 2 Procedimento
 O andamento do projeto será baseado no cronograma abaixo, com possíveis alterações do
 tempo dedicado a algumas atividades.
 
-# 3 Passos
+## 3 Passos
 1. Revisão da literatura bibliográfica.
 2. Listagem e organização dos algoritmos conhecidos.
 3. Organização do pipeline de comparação de genomas.
