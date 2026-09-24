@@ -3,6 +3,7 @@ Os problemas de Rearranjo de Genomas permitem a comparação de genomas de difer
 
 
 1 Objetivos
+
 Os problemas de Rearranjo de Genomas permitem a comparação de genomas de
 diferentes indivíduos e têm múltiplas aplicações na área da Biologia Computacional. Como
 esses problemas já vêm sendo estudados há muitos anos, várias versões foram propostas
@@ -19,10 +20,12 @@ comparações poderão ser realizadas em bases de dados geradas artificialmente 
 de genomas reais.
 
 #2 Procedimento
+
 O andamento do projeto será baseado no cronograma abaixo, com possíveis alterações do
 tempo dedicado a algumas atividades.
 
 #3 Passos
+
 1. Revisão da literatura bibliográfica.
 2. Listagem e organização dos algoritmos conhecidos.
 3. Organização do pipeline de comparação de genomas.
