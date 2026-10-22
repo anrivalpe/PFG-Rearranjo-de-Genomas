@@ -1,0 +1,266 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.39.6.
+--
+-- see: https://github.com/sol/hpack
+
+name:           HeurGRDG
+version:        0.1.0.1
+synopsis:       Rearrenge of Genomes With Duplicated Genes
+description:    Please see the README on GitHub at <https://github.com/gabriel-siqueira/HeurGRDG#readme>
+homepage:       https://github.com/gabriel-siqueira/HeurGRDG#readme
+bug-reports:    https://github.com/gabriel-siqueira/HeurGRDG/issues
+author:         Gabriel Siqueira
+maintainer:     gabriel.gabrielhs@gmail.com
+copyright:      2019 Gabriel Henriques Siqueira
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/gabriel-siqueira/HeurGRDG
+
+library
+  exposed-modules:
+      FindDistance
+      SimplifyGenomes
+      Values
+      CuckooSearch
+      CuckooSearchMeta
+      Extremities
+      GeneralizedBP
+      GeneticAlgorithm
+      Grasp
+      Heuristic
+      LocalSearch
+      MemeticAlgorithm
+      Meta
+      PermDist
+      RandomMaps
+      Separation
+      SeparationMeta
+      SimulatedAnnealing
+      TabuSearch
+      Aux
+      Genome
+      Instance
+      Mapping
+      MappingDup
+      MappingRep
+      Perm
+      Recorder
+      Types
+      Utils
+      Algs
+      HittingSetAux
+      MCSP
+      SoarAux
+      Args
+      ArgsDB
+      ArgsMCSP
+  other-modules:
+      Paths_HeurGRDG
+  hs-source-dirs:
+      src
+      src/heur/
+      src/misc/
+      src/alg/
+      src/args/
+  c-sources:
+      ./perm/perm_rearrange.c
+      ./perm/Bergeron/bergeron.c
+      ./perm/HartmanShamir/cicle_graph.c
+      ./perm/HartmanShamir/hartman_shamir.c
+      ./perm/HartmanShamir/perm_tree.c
+      ./perm/KaceciogluSankoff/kacecioglu_sankoff.c
+      ./perm/misc/bp_greedy.c
+      ./perm/misc/list.c
+      ./perm/misc/perm.c
+      ./perm/misc/stack.c
+      ./perm/misc/util.c
+      ./perm/WalterBP/walter_bp.c
+  build-depends:
+      Dist
+    , MonadRandom
+    , QuickCheck
+    , array
+    , base >=4.7 && <5
+    , binary
+    , bytestring
+    , containers >=0.5.11.0
+    , fgl
+    , hashable
+    , heap
+    , lens-simple
+    , mtl
+    , optparse-applicative
+    , parallel
+    , parallel-io
+    , process >=1.6
+    , random
+    , random-shuffle
+    , semigroups
+    , string-similarity
+    , suffixtree
+    , timeit
+    , transformers
+    , unordered-containers >=0.2.11
+  default-language: Haskell2010
+
+executable DB
+  main-is: DB.hs
+  other-modules:
+      Paths_HeurGRDG
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -main-is DB -W -Wno-unused-foralls
+  build-depends:
+      Dist
+    , HeurGRDG
+    , MonadRandom
+    , QuickCheck
+    , array
+    , base >=4.7 && <5
+    , binary
+    , bytestring
+    , containers >=0.5.11.0
+    , fgl
+    , hashable
+    , heap
+    , lens-simple
+    , mtl
+    , optparse-applicative
+    , parallel
+    , parallel-io
+    , process >=1.6
+    , random
+    , random-shuffle
+    , semigroups
+    , string-similarity
+    , suffixtree
+    , timeit
+    , transformers
+    , unordered-containers >=0.2.11
+  default-language: Haskell2010
+
+executable HeurGRDG
+  main-is: HeurGRDG.hs
+  other-modules:
+      Paths_HeurGRDG
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -O2 -with-rtsopts=-N -main-is HeurGRDG -W -Wno-unused-foralls
+  build-depends:
+      Dist
+    , HeurGRDG
+    , MonadRandom
+    , QuickCheck
+    , array
+    , base >=4.7 && <5
+    , binary
+    , bytestring
+    , containers >=0.5.11.0
+    , fgl
+    , hashable
+    , heap
+    , lens-simple
+    , mtl
+    , optparse-applicative
+    , parallel
+    , parallel-io
+    , process >=1.6
+    , random
+    , random-shuffle
+    , semigroups
+    , string-similarity
+    , suffixtree
+    , timeit
+    , transformers
+    , unordered-containers >=0.2.11
+  default-language: Haskell2010
+
+executable MCSP
+  main-is: HeurMCSP.hs
+  other-modules:
+      Paths_HeurGRDG
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -main-is HeurMCSP -W -Wno-unused-foralls
+  build-depends:
+      Dist
+    , HeurGRDG
+    , MonadRandom
+    , QuickCheck
+    , array
+    , base >=4.7 && <5
+    , binary
+    , bytestring
+    , containers >=0.5.11.0
+    , fgl
+    , hashable
+    , heap
+    , lens-simple
+    , mtl
+    , optparse-applicative
+    , parallel
+    , parallel-io
+    , process >=1.6
+    , random
+    , random-shuffle
+    , semigroups
+    , string-similarity
+    , suffixtree
+    , timeit
+    , transformers
+    , unordered-containers >=0.2.11
+  default-language: Haskell2010
+
+test-suite HeurGRDG-test
+  type: exitcode-stdio-1.0
+  main-is: Test.hs
+  other-modules:
+      AuxCheck
+      DupCheck
+      GenomeCheck
+      HeuristicsCheck
+      InstanceCheck
+      MapProperties
+      MCSPCheck
+      Properties
+      RepCheck
+      Paths_HeurGRDG
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -main-is Test -W -Wno-unused-foralls
+  build-depends:
+      Dist
+    , HeurGRDG
+    , MonadRandom
+    , QuickCheck
+    , array
+    , base >=4.7 && <5
+    , binary
+    , bytestring
+    , containers >=0.5.11.0
+    , fgl
+    , hashable
+    , heap
+    , lens-simple
+    , mtl
+    , optparse-applicative
+    , parallel
+    , parallel-io
+    , process >=1.6
+    , random
+    , random-shuffle
+    , semigroups
+    , string-similarity
+    , suffixtree
+    , timeit
+    , transformers
+    , unordered-containers >=0.2.11
+  default-language: Haskell2010

@@ -18,3 +18,25 @@ __pycache__/
 *.log
 SREV.zip
 *.zip
+
+# Haskell / Stack
+.stack-work/
+**/.stack-work/
+
+# Python
+__pycache__/
+*.pyc
+
+# Temporary files
+*.tmp
+*.temp
+
+# Core dumps
+core
+core.*
+
+# Editor
+.vscode/
+
+# Backup files
+*.save

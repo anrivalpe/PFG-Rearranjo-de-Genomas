@@ -1,0 +1,119 @@
+name:                HeurGRDG
+version:             0.1.0.1
+github:              "gabriel-siqueira/HeurGRDG"
+license:             BSD3
+author:              "Gabriel Siqueira"
+maintainer:          "gabriel.gabrielhs@gmail.com"
+copyright:           "2019 Gabriel Henriques Siqueira"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+synopsis:       Rearrenge of Genomes With Duplicated Genes
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/gabriel-siqueira/HeurGRDG#readme>
+
+dependencies:
+- Dist
+- MonadRandom
+- array
+- base >= 4.7 && < 5
+- binary
+- bytestring
+- containers >= 0.5.11.0
+- fgl
+- hashable
+- heap
+- lens-simple
+- mtl
+- optparse-applicative
+- parallel
+- parallel-io
+- process >= 1.6
+- random
+- random-shuffle
+- semigroups
+- suffixtree
+- transformers
+- unordered-containers >= 0.2.11
+- QuickCheck
+- string-similarity
+- timeit
+
+library:
+  source-dirs:
+  - src
+  - src/heur/
+  - src/misc/
+  - src/alg/
+  - src/args/
+  c-sources:
+  - ./perm/*.c
+  - ./perm/*/*.c
+
+executables:
+  HeurGRDG:
+    main:                HeurGRDG.hs
+    source-dirs:         app
+    other-modules:
+    - Paths_HeurGRDG
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -O2
+    - -with-rtsopts=-N
+    - -main-is HeurGRDG
+    - -W
+    - -Wno-unused-foralls
+    dependencies:
+    - HeurGRDG
+
+  DB:
+    main:                DB.hs
+    source-dirs:         app
+    other-modules:
+    - Paths_HeurGRDG
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -main-is DB
+    - -W
+    - -Wno-unused-foralls
+    dependencies:
+    - HeurGRDG
+
+  MCSP:
+    main:                HeurMCSP.hs
+    source-dirs:         app
+    other-modules:
+    - Paths_HeurGRDG
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -main-is HeurMCSP
+    - -W
+    - -Wno-unused-foralls
+    dependencies:
+    - HeurGRDG
+
+tests:
+  HeurGRDG-test:
+    main:                Test.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -main-is Test
+    - -W
+    - -Wno-unused-foralls
+    dependencies:
+    - HeurGRDG

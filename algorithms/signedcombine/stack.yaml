@@ -1,0 +1,9 @@
+resolver: nightly-2023-12-12
+
+packages:
+- .
+
+extra-deps:
+- suffixtree-0.2.2.1@sha256:cebcb1310034a6a4d5f9febececb1a8c28fe411376c6fca0faf1b4b0cdf4c176,1095
+- Dist-0.5.0@sha256:4fb6adc3ec73a8e338b2ad42f4504b1f79068adba5811c726508f2de744fce6b,1394
+- string-similarity-0.1.0.0@sha256:c999cd3b21ea048e207fc6d08d9a15a431ec7d0b1b077bacd01e40ee493c7a37,1593
